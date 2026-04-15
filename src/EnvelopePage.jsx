@@ -8,7 +8,7 @@ export default function EnvelopePage({ onOpen }) {
   const guestName = searchParams.get('name') || '';
   const [isOpening, setIsOpening] = useState(false);
 
-  const weddingDate = `${config.events.intimateParty.dateDay}.${config.events.weddingCeremony.dateMonth.padStart(2, '0')}.${config.events.weddingCeremony.dateYear}`;
+  const weddingDate = `${config.events.weddingCeremony.dateDay}.${config.events.weddingCeremony.dateMonth.padStart(2, '0')}.${config.events.weddingCeremony.dateYear}`;
 
   const handleClick = () => {
     if (isOpening) return;
