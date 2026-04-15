@@ -352,7 +352,7 @@ export default function App() {
               </div>
             </div>
             {/* Names - Placed to the right of photo */}
-            <div className="absolute top-[45px] left-[218px] w-[180px] text-left">
+            <div className="absolute top-[45px] left-[207px] w-[180px] text-left">
               <p className="font-secondary text-[42px] text-[#52613e] leading-none mb-1">Chú rể</p>
               <h3 className="font-primary text-[28px] font-bold text-[#52613e] uppercase lg:tracking-wider leading-tight">{config.couple.groom}</h3>
             </div>
@@ -478,25 +478,27 @@ export default function App() {
       <Section className="min-h-[400px] py-16 bg-[#fdfaf5]">
         <h2 className="font-secondary text-[45px] text-[#52613e] text-center mb-12">Timeline</h2>
 
-        <div className="relative w-full max-w-[420px] mx-auto h-[250px]">
-          {/* Connecting Line */}
-          <div className="absolute top-[50px] left-[157px] w-[120px] border-t-2 border-[#52613e] z-10"></div>
-
-          {/* Event 1 */}
-          <div className="absolute top-0 left-[25px] flex flex-col items-center w-[176px]">
-            <img src="https://w.ladicdn.com/s400x400/6322a62f2dad980013bb5005/thiep-thanh-dat-element_0005_29-20251010165559-b9jp9.png" className="w-[85px] h-[85px] mb-4 object-contain" alt="icon1" />
-            <div className="text-center">
-              <p className="font-primary text-[22px] font-bold text-[#52613e]">{config.events.intimateParty.time}</p>
-              <p className="font-primary text-[18px] text-[#52613e] uppercase lg:tracking-widest">{config.events.intimateParty.title}</p>
+        <div className="relative w-full max-w-[420px] mx-auto px-6">
+          <div className="flex items-start justify-around relative">
+            {/* Event 1 */}
+            <div className="flex flex-col items-center w-[140px]">
+              <img src="https://w.ladicdn.com/s400x400/6322a62f2dad980013bb5005/thiep-thanh-dat-element_0005_29-20251010165559-b9jp9.png" className="w-[85px] h-[85px] mb-4 object-contain" alt="icon1" />
+              <div className="text-center">
+                <p className="font-primary text-[22px] font-bold text-[#52613e]">{config.events.intimateParty.time}</p>
+                <p className="font-primary text-[18px] text-[#52613e] uppercase">{config.events.intimateParty.title}</p>
+              </div>
             </div>
-          </div>
 
-          {/* Event 2 */}
-          <div className="absolute top-0 left-[225px] flex flex-col items-center w-[176px]">
-            <img src="https://w.ladicdn.com/s400x400/6322a62f2dad980013bb5005/thiep-thanh-dat-element_0006_28-20251010165559-ejurh.png" className="w-[85px] h-[85px] mb-4 object-contain" alt="icon2" />
-            <div className="text-center">
-              <p className="font-primary text-[22px] font-bold text-[#52613e]">{config.events.weddingCeremony.time}</p>
-              <p className="font-primary text-[18px] text-[#52613e] uppercase lg:tracking-widest">{config.events.weddingCeremony.title}</p>
+            {/* Connecting Line */}
+            <div className="absolute left-1/2 -translate-x-1/2 top-[42px] w-[70px] border-t-2 border-[#52613e] z-10"></div>
+
+            {/* Event 2 */}
+            <div className="flex flex-col items-center w-[140px]">
+              <img src="https://w.ladicdn.com/s400x400/6322a62f2dad980013bb5005/thiep-thanh-dat-element_0006_28-20251010165559-ejurh.png" className="w-[85px] h-[85px] mb-4 object-contain" alt="icon2" />
+              <div className="text-center">
+                <p className="font-primary text-[22px] font-bold text-[#52613e]">{config.events.weddingCeremony.time}</p>
+                <p className="font-primary text-[18px] text-[#52613e] uppercase">{config.events.weddingCeremony.title}</p>
+              </div>
             </div>
           </div>
         </div>
