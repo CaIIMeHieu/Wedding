@@ -173,7 +173,7 @@ export default function App() {
           <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 1, duration: 1.5 }} className="absolute top-[183px] left-[131px] w-[223px] h-[262px] z-40">
             <img src="https://w.ladicdn.com/s550x600/6322a62f2dad980013bb5005/thiep-thanh-dat-element_0023_11-20251010160529-l3kgn.png" className="w-full h-full object-cover z-20 absolute pointer-events-none" alt="flower border" />
             <div className="absolute top-[23px] left-[22px] w-[179px] h-[181px] border-[2px] border-[#edecec] hover:rotate-0 transition-transform duration-300 shadow-sm" style={{ backgroundImage: `url(${config.images.heroPolaroidRight})`, backgroundSize: 'cover', transform: 'rotate(4deg)' }}></div>
-            <p className="font-primary text-[21px] uppercase tracking-[1px] text-[#32526e] absolute w-[135px] text-center" style={{ top: '210px', left: '21px', transform: 'rotate(5deg)', zIndex: 25 }}>25.04.2026</p>
+            <p className="font-primary text-[21px] uppercase tracking-[1px] text-[#32526e] absolute w-[135px] text-center" style={{ top: '210px', left: '21px', transform: 'rotate(5deg)', zIndex: 25 }}>{config.events.weddingCeremony.dateDay}.{config.events.weddingCeremony.dateMonth}.{config.events.weddingCeremony.dateYear}</p>
           </motion.div>
 
           {/* Left Photo (Ảnh đằng trước có ghi ngày tháng) */}
