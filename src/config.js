@@ -17,7 +17,7 @@ export const config = {
   },
   events: {
     intimateParty: {
-      title: "ĐÓN KHÁCH",
+      title: "TIỆC CƯỚI",
       time: "09:00",
       dateDay: "25",
       dateMonth: "4",
@@ -61,7 +61,7 @@ export const config = {
       name: "Vũ Văn Toàn",
       bankName: "MBBANK",
       accountNumber: "2266699966",
-      qrCode: "https://w.ladicdn.com/s450x450/6322a62f2dad980013bb5005/screenshot_1772097648-20260226092100-dwv2n.png"
+      qrCode: "/images/QrChuRe.jpg"
     }
   },
   music: "https://camcui.vn/bai103.mp3",

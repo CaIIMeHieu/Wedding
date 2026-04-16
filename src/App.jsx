@@ -614,15 +614,22 @@ export default function App() {
           </button>
 
           {/* Giving Box */}
-          <div className="w-full max-w-[380px] bg-white rounded-xl shadow-lg border border-gray-200 p-6 flex items-center justify-between mb-16">
-            <div className="flex-1">
-              <p className="font-primary text-[14px] uppercase text-[#52613e] font-bold tracking-widest mb-1">Chú rể</p>
-              <h3 className="font-secondary text-[35px] text-[#52613e] mb-4 leading-none">{config.bank.groom.name}</h3>
-              <p className="font-primary text-[24px] uppercase text-[#52613e] leading-none">{config.bank.groom.bankName}</p>
-              <p className="font-primary text-[20px] text-[#52613e] mt-1 tracking-wider">{config.bank.groom.accountNumber}</p>
+          <div className="w-full max-w-[340px] bg-white rounded-2xl shadow-lg border border-gray-200 overflow-hidden mb-16">
+            {/* Photo on top */}
+            <div className="w-full h-[200px]">
+              <img src={config.images.transitionBg} alt="Wedding" className="w-full h-full object-cover object-center" />
             </div>
-            <div className="w-[120px] h-[120px] bg-white p-1 rounded-lg shadow-inner border ml-4">
-              <img src={config.bank.groom.qrCode} alt="QR Code" className="w-full h-full object-contain" />
+            {/* Bottom: QR left, text right */}
+            <div className="flex items-center px-4 py-4 gap-4">
+              <div className="w-[110px] h-[110px] flex-shrink-0 bg-white border border-gray-100 rounded-lg p-1">
+                <img src={config.bank.groom.qrCode} alt="QR Code" className="w-full h-full object-contain" />
+              </div>
+              <div className="flex-1">
+                <p className="font-secondary text-[26px] text-[#52613e] leading-none mb-1">Chú rể</p>
+                <h3 className="font-primary text-[14px] font-bold uppercase text-[#52613e] leading-tight mb-2 tracking-wide">{config.bank.groom.name}</h3>
+                <p className="font-primary text-[13px] text-[#52613e] leading-none">{config.bank.groom.bankName}</p>
+                <p className="font-primary text-[13px] text-[#52613e] mt-1 tracking-wider">{config.bank.groom.accountNumber}</p>
+              </div>
             </div>
           </div>
 
