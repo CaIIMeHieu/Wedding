@@ -135,6 +135,7 @@ const CountdownTimer = ({ targetDate }) => {
 export default function App() {
   const [opened, setOpened] = useState(false);
   const [currentGalleryIndex, setCurrentGalleryIndex] = React.useState(0);
+  const [copiedGroom, setCopiedGroom] = useState(false);
   const [calRef, calInView] = useInView({ triggerOnce: true, threshold: 0.15 });
 
   React.useEffect(() => {
@@ -485,7 +486,7 @@ export default function App() {
               <img src="https://w.ladicdn.com/s400x400/6322a62f2dad980013bb5005/thiep-thanh-dat-element_0005_29-20251010165559-b9jp9.png" className="w-[85px] h-[85px] mb-4 object-contain" alt="icon1" />
               <div className="text-center">
                 <p className="font-primary text-[22px] font-bold text-[#52613e]">{config.events.intimateParty.time}</p>
-                <p className="font-primary text-[18px] text-[#52613e] uppercase">{config.events.intimateParty.title}</p>
+                <p className="font-primary text-[18px] text-[#52613e] uppercase">Đón khách</p>
               </div>
             </div>
 
@@ -628,7 +629,24 @@ export default function App() {
                 <p className="font-secondary text-[26px] text-[#52613e] leading-none mb-1">Chú rể</p>
                 <h3 className="font-primary text-[14px] font-bold uppercase text-[#52613e] leading-tight mb-2 tracking-wide">{config.bank.groom.name}</h3>
                 <p className="font-primary text-[13px] text-[#52613e] leading-none">{config.bank.groom.bankName}</p>
-                <p className="font-primary text-[13px] text-[#52613e] mt-1 tracking-wider">{config.bank.groom.accountNumber}</p>
+                <div className="flex items-center gap-2 mt-1">
+                  <p className="font-primary text-[13px] text-[#52613e] tracking-wider">{config.bank.groom.accountNumber}</p>
+                  <button
+                    onClick={() => { navigator.clipboard.writeText(config.bank.groom.accountNumber); setCopiedGroom(true); setTimeout(() => setCopiedGroom(false), 2000); }}
+                    className="flex items-center justify-center w-[22px] h-[22px] rounded-md border border-[#52613e] text-[#52613e] hover:bg-[#52613e] hover:text-white transition-colors flex-shrink-0"
+                    title="Sao chép số tài khoản"
+                  >
+                    {copiedGroom ? (
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" className="w-[12px] h-[12px]">
+                        <path fillRule="evenodd" d="M12.416 3.376a.75.75 0 0 1 .208 1.04l-5 7.5a.75.75 0 0 1-1.154.114l-3-3a.75.75 0 0 1 1.06-1.06l2.353 2.353 4.493-6.74a.75.75 0 0 1 1.04-.207Z" clipRule="evenodd" />
+                      </svg>
+                    ) : (
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-[12px] h-[12px]">
+                        <path d="M7 6V3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1h-3v3c0 .552-.45 1-1.007 1H4.007A1 1 0 0 1 3 21l.003-14c0-.552.45-1 1.006-1H7zm2 0h8v11h2V4H9v2zm-2 2v12h10V8H7z"/>
+                      </svg>
+                    )}
+                  </button>
+                </div>
               </div>
             </div>
           </div>
